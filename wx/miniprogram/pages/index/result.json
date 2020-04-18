@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "ff-canvas": "@antv/f2-canvas"
+  },
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "得分",
+  "backgroundColor": "#5ED3FF",
+  "navigationBarBackgroundColor": "#5ED3FF",
+  "navigationBarTextStyle": "white"
+}

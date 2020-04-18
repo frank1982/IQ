@@ -1,0 +1,51 @@
+<image src="../../images/banner.png" class="banner"></image>
+<view class="info">
+  <view class="line">
+    <view class="txt">姓名</view>
+    <input class="in" placeholder="请输入孩子姓名" value='{{name}}' bindinput='nameInput'></input>
+  </view>
+  <view class="line">
+    <view class="txt">年龄</view>
+    <view class="inv" bindtap="inputAge">{{ageStr}}</view>
+  </view>
+  <view class="line">
+    <view class="txt">地区</view>
+    <view class="inv" bindtap="inputArea">{{areaStr}}</view>
+  </view>
+  <view class="btn" bindtap="clickSure">确定</view>
+  <view class="detail" id="d0">.仅限4-6周岁儿童参加</view>
+  <view class="detail" id="d1">.请家长大声的读出题目</view>
+  <view class="detail" id="d2">.根据孩子的回答选择对应的选项</view>
+</view>
+
+<view wx:if="{{isAgeBoxShow}}" class="boxView">
+  <view class="boxBg">
+    <view class="ageItem" bindtap='clickAgeItem' data-bean='4'>4周岁</view>
+    <view class="ageItem" bindtap='clickAgeItem' data-bean='5'>5周岁</view>
+    <view class="ageItem" bindtap='clickAgeItem' data-bean='6'>6周岁</view>
+    <view class="ageTxt" bindtap='clickCloseAge'>仅限4-6周岁儿童</view>
+  </view>
+  <image src="../../images/close.png" class="closeImg" bindtap="closeAgeBox"></image>
+</view>
+
+<view wx:if="{{isAreaBoxShow}}" class="boxView">
+  <scroll-view class="boxBg2" scroll-y="true">
+  <!--
+     <view class="areaItem" bindtap='clickAreaItem' wx:for="{{areaList}}" data-bean="{{areaList[index]}}">{{areaList[index]}}</view>
+  -->
+    <view class="areaContainer">
+      <view class="areaItem" bindtap='clickAreaItem' wx:for="{{areaList}}" data-bean="{{areaList[index]}}">{{areaList[index]}}</view>
+    </view>
+  </scroll-view>
+  <image src="../../images/close.png" class="closeImg" bindtap="closeAreaBox"></image>
+</view>
+
+<view wx:if="{{isAlertBoxShow}}" class="boxView">
+<block class="alertBox">
+  <image class="alertBoxBg" src='../../images/alertBoxBg.png'></image>
+  <view class="alertInfo">{{alertInfo}}</view>
+  <view class="alertBtn" bindtap="clickKnow">知道了</view>
+  
+ 
+</block>
+</view>

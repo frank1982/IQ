@@ -1,0 +1,20 @@
+<block wx:if="{{flag_startInter}}">
+  <view class="interStr">{{setInterStr}}</view>
+</block>
+<block wx:else>
+<!--
+  <image class="rstImg" src="../../images/reset.png"></image>
+  -->
+  <view class="title">
+    <view class="titleTxt" id='tx0'>第{{nowQnum+1}}题</view>
+    <view class="titleTxt" id='tx1'>剩余{{totalQnum-nowQnum-1}}题</view>
+    <image class="clock" src="../../images/clock.png"></image>
+    <view class="clockTime">{{nowTestLeftTime}}</view>
+  </view>
+  <view class="content" wx:if="{{showQuestion.question != '{}'}}">
+    <view class="question">{{showQuestion.question}}</view>
+    
+    <view class="{{isCorrect[index] == 0 ?'options':(isCorrect[index] == 1?'options_correct':'options_wrong')}}" wx:for="{{showQuestion.answers}}" bindtap="clickOptions" data-bean="{{index}}">{{showQuestion.answers[index]}}</view>
+
+  </view>
+</block>

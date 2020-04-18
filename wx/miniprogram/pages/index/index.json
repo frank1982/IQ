@@ -1,0 +1,10 @@
+{
+  "window":{
+    "navigationBarBackgroundColor": "#EEC23C",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "chao99Demo",
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "light"
+  },
+  "disableScroll": true
+}

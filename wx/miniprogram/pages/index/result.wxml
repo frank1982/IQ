@@ -1,0 +1,36 @@
+
+<view class='awardView' style="450rpx; 363rpx;">
+  <image src='{{awardImg}}' class="awardImg"></image>
+  <view class="score">{{finalScore}}</view>
+  <view class="awardLevel">{{awardName}}</view>
+</view>
+<image src="{{cap}}" class="cap"></image>
+<view class="title">{{name}}</view>
+<view class="titleTxt">聪明儿童-韦氏题库智商测试成绩:</view>
+<view class="line">
+  <view class="one">得分:</view>
+  <view class="two">{{finalScore}} 分</view>
+</view>
+<view class="line">
+  <view class="one">时间:</view>
+  <view class="two">{{useTime}}</view>
+</view>
+<view class="line">
+  <view class="one">排名:</view>
+  <view class="two">{{list}}</view>
+</view>
+  <view class="container">
+    <ff-canvas id="mycanvas" canvas-id="mycanvas"></ff-canvas>
+  </view>
+<view class="shareView">
+  <view class="saveBtn" bindtap="clickSave">保存成绩</view>
+  <!--
+  <view class="shareBtn" bindtap="clickShare">邀请好友</view>
+  -->
+  <view class="shareContainer">
+    <button open-type='share' class="btn-share">邀请好友</button>
+  </view>
+</view>  
+<image src="../../images/home.png" class="homeIcon" bindtap="clickHome"></image>
+<canvas canvas-id="downCanvas" style="width:750rpx;" id="downCanvas"></canvas>
+<canvas canvas-id="shareCanvas" style="width:750rpx;" id="shareCanvas"></canvas>
